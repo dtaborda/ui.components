@@ -1,0 +1,10 @@
+{
+  "name": "Bussines Reach",
+  "version": "0.0.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "bootstrap-sass-official": "~3.2.0",
+    "fontawesome": "~4.2.0"   
+  }
+}
