@@ -10,15 +10,15 @@ lib-cov
 *.swo
 .DS_Store
 
+node_modules
+npm-debug.log
+dist
+bower_components
+src/vendor
+styles
+
 pids
 logs
 results
 # test coverage files
 coverage/
-
-node_modules
-npm-debug.log
-dist
-bower_components
-
-template/**/*.js
