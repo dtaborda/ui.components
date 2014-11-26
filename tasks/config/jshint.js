@@ -16,15 +16,13 @@ module.exports = function(grunt) {
             afterconcat: ['<%= config.dist %>/<%= config.name %>-<%= config.version %>.js']
         },
 
-        app:{
-            beforeconcat:[
-                'Gruntfile.js',
-                'task/**/*.js',
-                '<%= config.src %>/components/**/*.js',
-                '<%= config.src %>/app/**/*.js',
-                '<%= config.src %>/services/**/*.js'
+        app:[
+            'Gruntfile.js',
+            'task/**/*.js',
+            '<%= config.src %>/components/**/*.js',
+            '<%= config.src %>/app/**/*.js',
+            '<%= config.src %>/services/**/*.js'
             ]
-        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');

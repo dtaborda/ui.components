@@ -91,6 +91,7 @@ module.exports = function (grunt) {
         grunt.task.run([
             'jshint:dist',
             'clean',
+            'wiredep',
             'html2js:dist',
             'concat',
             'uglify',

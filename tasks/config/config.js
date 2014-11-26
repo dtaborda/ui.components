@@ -5,17 +5,19 @@ module.exports = function(grunt){
         src: 'src',
         srcService: 'services',
         styles: 'styles/',
-        vendor:'!src/vendor/**/*.js'
+        vendor:'!src/vendor/**/*.js',
+        app: require('../../bower.json').appPath || 'app',
     };
 
     grunt.config.set('config',{
         pkg: grunt.file.readJSON('package.json'),
+        app: grunt.file.readJSON('package.json').app,
         name: grunt.file.readJSON('package.json').name,
         version: grunt.file.readJSON('package.json').version,
         description: grunt.file.readJSON('package.json').description,
         lisense: grunt.file.readJSON('package.json').lisense,
         paths: paths,
-        vendor: paths.vendor,
+        vendor: 'src/vendor',
         src: paths.src,
         dist: paths.dist,
         styles: paths.styles,

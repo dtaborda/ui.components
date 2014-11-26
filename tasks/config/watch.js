@@ -17,18 +17,18 @@ module.exports = function(grunt) {
 
 	grunt.config.set('watch', {
 		html: {
-			files: ['<%= config.src %>/**/*.html'],
-			tasks: ['html2js', 'build']
+			files: ['<%= config.src %>/**/*.html','<%= config.src %>/**/**/*.html'],
+			tasks: ['wiredep']
 		},
 		js:{
-				files:['<%= jshint.files %>'],
-				tasks:['jshint','concat','uglify']
+			files:['<%= jshint.app %>'],
+			tasks:['jshint']
 		},
         livereload: {
             options: {
                 livereload: LIVERELOAD_PORT
             },
-            files: ['<%= config.dist %>/*.html','<%= jshint.files %>']
+            files: ['<%= config.src %>/**/*.html','<%= config.src %>/**/*.html','<%= jshint.app %>']
         }
 	});
 

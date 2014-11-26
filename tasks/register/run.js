@@ -1,11 +1,9 @@
 module.exports = function (grunt) {
-    grunt.registerTask('build2', function(){
+    grunt.registerTask('run', function(){
         grunt.task.run([
-            'clean',
             'jshint',
-            'concat',
-            'html2js',
-            'uglify',
+            'clean:vendor',
+            'copy',
             'open:server',
             'connect:livereload',
             'watch'
