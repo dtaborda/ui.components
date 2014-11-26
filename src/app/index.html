@@ -40,8 +40,17 @@
                     <label class="btn btn-success" ng-model="radioModel" btn-radio="'Right'" uncheckable>Right</label>
                 </div>
             </div>
-            <div class="col-md-6">
 
+            <div class="col-md-6"  style="height: 305px">
+                 <carousel interval="myInterval">
+                    <slide ng-repeat="slide in slides" active="slide.active">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h4>Slide {{$index}}</h4>
+                            <p>{{slide.text}}</p>
+                        </div>
+                    </slide>
+                </carousel>
             </div>
         </div>
 

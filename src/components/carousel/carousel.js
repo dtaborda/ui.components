@@ -218,7 +218,7 @@ angular.module('ui.component.carousel', ['ui.component.transition', 'ngAnimate']
     replace: true,
     controller: 'CarouselController',
     require: 'carousel',
-    templateUrl: 'src/carousel/carousel.html',
+    templateUrl: 'src/components/carousel/carousel.html',
     scope: {
       interval: '=',
       noTransition: '=',
@@ -274,7 +274,7 @@ function CarouselDemoCtrl($scope) {
     restrict: 'EA',
     transclude: true,
     replace: true,
-    templateUrl: 'src/carousel/slide.html',
+    templateUrl: 'src/components/carousel/slide.html',
     scope: {
       active: '=?'
     },
