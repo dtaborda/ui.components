@@ -92,7 +92,7 @@ angular.module('ui.component.tabs', [])
       type: '@'
     },
     controller: 'TabsetController',
-    templateUrl: 'src/tabs/tabset.html',
+    templateUrl: 'src/components/tabs/tabset.html',
     link: function(scope, element, attrs) {
       scope.vertical = angular.isDefined(attrs.vertical) ? scope.$parent.$eval(attrs.vertical) : false;
       scope.justified = angular.isDefined(attrs.justified) ? scope.$parent.$eval(attrs.justified) : false;
@@ -185,7 +185,7 @@ angular.module('ui.component.tabs', [])
     require: '^tabset',
     restrict: 'EA',
     replace: true,
-    templateUrl: 'src/tabs/tab.html',
+    templateUrl: 'src/components/tabs/tab.html',
     transclude: true,
     scope: {
       active: '=?',

@@ -63,7 +63,7 @@ angular.module('ui.component.modal', ['ui.component.transition'])
     return {
       restrict: 'EA',
       replace: true,
-      templateUrl: 'src/modal/backdrop.html',
+      templateUrl: 'src/components/modal/backdrop.html',
       link: function (scope, element, attrs) {
         scope.backdropClass = attrs.backdropClass || '';
 
@@ -87,7 +87,7 @@ angular.module('ui.component.modal', ['ui.component.transition'])
       replace: true,
       transclude: true,
       templateUrl: function(tElement, tAttrs) {
-        return tAttrs.templateUrl || 'src/modal/window.html';
+        return tAttrs.templateUrl || 'src/components/modal/window.html';
       },
       link: function (scope, element, attrs) {
         element.addClass(attrs.windowClass || '');

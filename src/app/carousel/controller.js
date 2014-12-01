@@ -1,20 +1,7 @@
 'use strict';
 
 angular.module('UIComponents')
-    .controller('MainCtrl', ['$scope', function ($scope) {
-
-        /*Buttons*/
-        $scope.singleModel = 1;
-
-        $scope.radioModel = 'Middle';
-
-        $scope.checkModel = {
-            left: false,
-            middle: true,
-            right: false
-        };
-
-        /*Carousel*/
+    .controller('CarouselCtrl',['$scope', function($scope){
         $scope.myInterval = 5000;
         var slides = $scope.slides = [];
         $scope.addSlide = function() {
@@ -28,4 +15,4 @@ angular.module('UIComponents')
         for (var i=0; i<4; i++) {
             $scope.addSlide();
         }
-}]);
+    }]);

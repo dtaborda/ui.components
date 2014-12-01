@@ -13,57 +13,59 @@
         <!--[if lt IE 7]>
           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="content-fluid" ng-controller="MainCtrl">
-            <div class="col-md-6">
-                <h4>Single toggle</h4>
-                <pre>{{singleModel}}</pre>
-                <button type="button" class="btn btn-primary" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
-                    Single Toggle
-                </button>
-                <h4>Checkbox</h4>
-                <pre>{{checkModel}}</pre>
-                <div class="btn-group">
-                    <label class="btn btn-primary" ng-model="checkModel.left" btn-checkbox>Left</label>
-                    <label class="btn btn-primary" ng-model="checkModel.middle" btn-checkbox>Middle</label>
-                    <label class="btn btn-primary" ng-model="checkModel.right" btn-checkbox>Right</label>
-                </div>
-                <h4>Radio &amp; Uncheckable Radio</h4>
-                <pre>{{radioModel || 'null'}}</pre>
-                <div class="btn-group">
-                    <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Left'">Left</label>
-                    <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Middle'">Middle</label>
-                    <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Right'">Right</label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-success" ng-model="radioModel" btn-radio="'Left'" uncheckable>Left</label>
-                    <label class="btn btn-success" ng-model="radioModel" btn-radio="'Middle'" uncheckable>Middle</label>
-                    <label class="btn btn-success" ng-model="radioModel" btn-radio="'Right'" uncheckable>Right</label>
-                </div>
-            </div>
 
-            <div class="col-md-6"  style="height: 305px">
-                 <carousel interval="myInterval">
-                    <slide ng-repeat="slide in slides" active="slide.active">
-                        <img ng-src="{{slide.image}}" style="margin:auto;">
-                        <div class="carousel-caption">
-                            <h4>Slide {{$index}}</h4>
-                            <p>{{slide.text}}</p>
-                        </div>
-                    </slide>
-                </carousel>
+       <!--<div class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
+              <div class="container">
+                <a class="brand" ui-sref="home">Home</a>
+                <ul class="nav">
+                    <li ng-class="{active: $state.includes('contacts')}">
+                        <a ui-sref="contacts.list">Contacts</a>
+                    </li>
+                </ul>
+              </div>
             </div>
         </div>
+        <div ui-view class="container-fluid"></div> -->
+
+        <a ui-sref="carousels">Carouseles</a>
+        <a ui-sref="about">About</a>
+
+        <div class="container-fluid" ui-view='main'></div>
 
         <!-- Vendor components -->
-        <script src="vendor/jquery/dist/jquery.js"></script>
-        <script src="vendor/angular/angular.js"></script>
-        <script src="vendor/angular-animate/angular-animate.js"></script>
-        <script src="vendor/ui-components/ui.component-tpls-1.0.0.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.2.16/angular-animate.min.js"></script>
+        <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
         <!-- end Vendor components -->
 
+        <!-- List of components-->
+        <script src="components/transition/transition.js"></script>
+        <script src="components/dateparser/dateparser.js"></script>
+        <script src="components/position/position.js"></script>
+        <script src="components/buttons/buttons.js"></script>
+        <script src="components/carousel/carousel.js"></script>
+        <script src="components/datepicker/datepicker.js"></script>
+        <script src="components/modal/modal.js"></script>
+        <script src="components/tabs/tabs.js"></script>
+        <!-- end list of componets-->
+
         <!-- angular app -->
+        <script src="carousels/router.js"></script>
+        <script src="carousels/controller.js"></script>
+        <script src="about/about.list/router.js"></script>
+        <script src="about/about.list/controller.js"></script>
+        <script src="about/router.js"></script>
+        <script src="about/controller.js"></script>
+        <script src="main/router.js"></script>
+        <script src="main/controller.js"></script>
         <script src="app.js"></script>
-        <script src="controller.js"></script>
+        <script src="buttons/controller.js"></script>
+        <script src="carousel/controller.js"></script>
+        <script src="datepicker/controller.js"></script>
+        <script src="modal/controller.js"></script>
+        <script src="tabs/controller.js"></script>
         <!-- end angular app -->
 
     </body>

@@ -17,6 +17,7 @@ module.exports = function(grunt) {
                 middleware: function (connect) {
                     return [
                         lrSnippet,
+                        mountFolder(connect, '.'),
                         mountFolder(connect, 'src'),
                         mountFolder(connect, 'src/app')
                     ];

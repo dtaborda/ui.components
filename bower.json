@@ -19,10 +19,11 @@
   ],
   "dependencies": {
     "require": "*",
-    "jquery": "~2.1.1"
+    "angular": "~1.2.16",
+    "angular-animate": "~1.2.16"
   },
   "devDependencies": {
-    "angular-strap": "~2.1.3"
+    "angular-ui-router": "~0.2.13"
   },
   "appPath": "src/app"
 }

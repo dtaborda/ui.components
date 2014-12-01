@@ -1,0 +1,48 @@
+<div class="well" ng-controller="CarouselCtrl">
+    <div class="row">
+        <carousel set-ng-animate="false" interval="myInterval" class="col-md-6">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+                <div class="carousel-caption">
+                    <h4>Slide {{$index}}</h4>
+                    <p>{{slide.text}}</p>
+                </div>
+            </slide>
+        </carousel>
+
+        <carousel set-ng-animate="false" class="col-md-6">
+            <slide>
+                <img width="100%" height="180"  src="http://www.dtelepathy.com/wp-content/uploads/2013/11/Flat-Palette-1-bananacafe-syes.png" alt="Imagen Uno">
+                <div class="carousel-caption">
+                  <h2>Imagen Uno</h2>
+                  <p>Texto descripcion de la <strong>Imagen Uno</strong>, un poco mas largo que el titulo de la misma.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Accion</a></p>
+                </div>
+            </slide>
+            <slide>
+                <img width="100%" height="180" src="http://albertoromeu.com/wp-content/uploads/2013/10/flat-ui-colors1.png" alt="Imagen Dos">
+                <div class="carousel-caption">
+                  <h2>Imagen Dos</h2>
+                  <p>Texto descripcion de la <strong>Imagen Dos</strong>, un poco mas largo que el titulo de la misma.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Accion</a></p>
+                </div>
+            </slide>
+            <slide>
+                <img  width="100%" height="180" src="http://www.awwwards.com/awards/images/2013/07/long-shadow-step-2.jpg" alt="Imagen Tres">
+                <div class="carousel-caption">
+                  <h2>Imagen Tres</h2>
+                  <p>Texto descripcion de la <strong>Imagen Tres</strong>, un poco mas largo que el titulo de la misma.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Accion</a></p>
+                </div>
+            </slide>
+            <slide>
+                <img  width="100%" height="180" src="http://anthonysantiago.com/wp-content/uploads/2014/04/flat-UI-colors-300x135.png" alt="Imagen Cuatro">
+                <div class="carousel-caption">
+                  <h2>Imagen Cuatro</h2>
+                  <p>Texto descripcion de la <strong>Imagen Cuatro</strong>, un poco mas largo que el titulo de la misma.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Accion</a></p>
+                </div>
+            </slide>
+        </carousel>
+    </div>
+</div>
