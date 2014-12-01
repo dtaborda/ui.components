@@ -1,15 +1,15 @@
 'use strict';
 angular
-    .module('UIComponents.carousels',['ui.router'])
+    .module('UIComponents.about',['ui.router'])
         .config(['$stateProvider',
             function ($stateProvider) {
                 $stateProvider
-                    .state('carousels', {
-                        url: '/carousels',
+                    .state('about', {
+                        url: '/about',
                         views:{
                             'main':{
-                                controller: 'CarouselsCtrl',
-                                templateUrl: 'carousels/tpl.html'
+                                controller: 'AboutCtrl',
+                                templateUrl: 'routers/about/tpl.html'
                             }
                         }
                     });

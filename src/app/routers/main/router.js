@@ -1,15 +1,15 @@
 'use strict';
 angular
-    .module('UIComponents.about',['ui.router'])
+    .module('UIComponents.main',['ui.router'])
         .config(['$stateProvider',
             function ($stateProvider) {
                 $stateProvider
-                    .state('about', {
-                        url: '/about',
+                    .state('main', {
+                        url: '/',
                         views:{
                             'main':{
-                                controller: 'AboutCtrl',
-                                templateUrl: 'about/tpl.html'
+                                controller: 'MainCtrl',
+                                templateUrl: 'routers/main/tpl.html'
                             }
                         }
                     });

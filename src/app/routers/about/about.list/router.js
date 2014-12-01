@@ -9,7 +9,7 @@ angular
                         views:{
                             'main.list':{
                                 controller: 'AboutListCtrl',
-                                templateUrl: 'about/about.list/tpl.html'
+                                templateUrl: 'routers/about/about.list/tpl.html'
                             }
                         }
                     });
