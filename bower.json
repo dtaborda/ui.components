@@ -20,7 +20,8 @@
   "dependencies": {
     "require": "*",
     "angular": "~1.2.16",
-    "angular-animate": "~1.2.16"
+    "angular-animate": "~1.2.16",
+    "angular-touch": ">=1.2.10"
   },
   "devDependencies": {
     "angular-ui-router": "~0.2.13"

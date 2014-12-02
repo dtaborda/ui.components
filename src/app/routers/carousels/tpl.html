@@ -1,3 +1,13 @@
 <div class="well">
     <h1>Carousels</h1>
+
+    <div class="carousel-demo-game">
+        <ul ng-repeat="carousel in carousels" rn-carousel rn-carousel-transition="hexagon" rn-carousel-buffered class="carousel1">
+            <li ng-repeat="slide in slides track by slide.id" ng-class="'id-' + slide.id">
+                <div ng-style="{'background-image': 'url(' + slide.img + ')'}"  class="bgimage">
+                    #{{ slide.id }}
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>

@@ -10,7 +10,8 @@ angular
         'ui.component.carousel',
         'ui.component.datepicker',
         'ui.component.modal',
-        'ui.component.tabs'
+        'ui.component.tabs',
+        'angular-carousel'
     ])
 
     .config(['$stateProvider', '$urlRouterProvider',
