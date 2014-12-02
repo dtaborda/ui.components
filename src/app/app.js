@@ -3,6 +3,8 @@ angular
     .module('UIComponents', [
         'UIComponents.main',
         'UIComponents.carousels',
+        'UIComponents.multimedia',
+        'UIComponents.multimedia.video',
         'UIComponents.about',
         'UIComponents.about.list',
         'ui.router',
@@ -10,7 +12,8 @@ angular
         'ui.component.carousel',
         'ui.component.datepicker',
         'ui.component.modal',
-        'ui.component.tabs'
+        'ui.component.tabs',
+        'ui.component.youtube-embed'
     ])
 
     .config(['$stateProvider', '$urlRouterProvider',
