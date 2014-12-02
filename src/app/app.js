@@ -13,7 +13,8 @@ angular
         'ui.component.datepicker',
         'ui.component.modal',
         'ui.component.tabs',
-        'ui.component.youtube-embed'
+    	'angular-carousel',
+    	'ui.component.youtube-embed'
     ])
 
     .config(['$stateProvider', '$urlRouterProvider',

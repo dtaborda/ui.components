@@ -1,3 +1,23 @@
 <div class="well">
     <h1>Carousels</h1>
+
+
+    <div class="carousel-demo">
+
+        <ul rn-carousel rn-carousel-controls rn-carousel-index="carouselIndex" rn-carousel-buffered class="carousel1">
+            <li ng-repeat="slide in slides track by slide.id" ng-class="'id-' + slide.id">
+                <div ng-style="{'background-image': 'url(' + slide.img + ')'}"  class="bgimage"></div>
+            </li>
+        </ul>
+
+        <div class="rn-carousel-indicator custom-indicator col-md-12">
+            <ul class="list-inline">
+                <li ng-repeat="slide in slides" ng-click="$parent.carouselIndex = $index">
+                    <img ng-src="{{slide.tmb}}" class="img-responsive" ng-class="{active: $index==$parent.carouselIndex}">
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
 </div>
