@@ -43,6 +43,9 @@
                         <li ui-sref-active="active">
                             <a ui-sref="about">About</a>
                         </li>
+                         <li ui-sref-active="active">
+                            <a ui-sref="test">Test</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -56,6 +59,8 @@
         <script src="https://code.angularjs.org/1.2.16/angular-animate.min.js"></script>
         <script src="vendor/angular-touch/angular-touch.js"></script>
         <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="vendor/angular-carousel/dist/angular-carousel.js"></script>
+        <script src="vendor/angular-youtube-mb/dist/angular-youtube-embed.min.js"></script>
         <!-- end Vendor components -->
 
         <!-- List of components-->
@@ -64,14 +69,15 @@
         <script src="components/position/position.js"></script>
         <script src="components/buttons/buttons.js"></script>
         <script src="components/carousel/carousel.js"></script>
-        <script src="components/carousels/angular-carousel.js"></script>
         <script src="components/datepicker/datepicker.js"></script>
         <script src="components/modal/modal.js"></script>
         <script src="components/tabs/tabs.js"></script>
-        <script src="components/youtube-embed/youtube-embed.js"></script>
         <!-- end list of componets-->
 
         <!-- angular app -->
+        <!-- router -->
+        <script src="routers/test/router.js"></script>
+         <script src="routers/test/controller.js"></script>
         <script src="routers/carousels/router.js"></script>
         <script src="routers/carousels/controller.js"></script>
         <script src="routers/about/about.list/router.js"></script>
@@ -85,6 +91,7 @@
         <script src="routers/multimedia/router.js"></script>
         <script src="routers/multimedia/controller.js"></script>
         <script src="app.js"></script>
+        <!-- componets -->
         <script src="components/buttons/controller.js"></script>
         <script src="components/carousel/controller.js"></script>
         <script src="components/datepicker/controller.js"></script>

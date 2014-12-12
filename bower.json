@@ -24,7 +24,9 @@
     "angular-touch": ">=1.2.10"
   },
   "devDependencies": {
-    "angular-ui-router": "~0.2.13"
+    "angular-ui-router": "~0.2.13",
+    "angular-youtube-mb": "~0.1.6",
+    "angular-carousel": "~0.3.7"
   },
   "appPath": "src/app"
 }

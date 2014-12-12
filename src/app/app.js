@@ -7,6 +7,7 @@ angular
         'UIComponents.multimedia.video',
         'UIComponents.about',
         'UIComponents.about.list',
+        'UIComponents.test',
         'ui.router',
         'ui.component.buttons',
         'ui.component.carousel',
@@ -14,7 +15,7 @@ angular
         'ui.component.modal',
         'ui.component.tabs',
     	'angular-carousel',
-    	'ui.component.youtube-embed'
+    	'youtube-embed'
     ])
 
     .config(['$stateProvider', '$urlRouterProvider',
