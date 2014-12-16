@@ -5,7 +5,7 @@ angular
             function ($stateProvider) {
                 $stateProvider
                     .state('about.list', {
-                        url: '/about/list',
+                        url: '/list',
                         views:{
                             'main.list':{
                                 controller: 'AboutListCtrl',

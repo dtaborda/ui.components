@@ -1,8 +1,23 @@
-<div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel" ng-swipe-right="prev()" ng-swipe-left="next()">
-    <ol class="carousel-indicators" ng-show="slides.length > 1">
-        <li ng-repeat="slide in slides track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)"></li>
-    </ol>
-    <div class="carousel-inner" ng-transclude></div>
-    <a class="left carousel-control" ng-click="prev()" ng-show="slides.length > 1"><span class="glyphicon glyphicon-chevron-left"></span></a>
-    <a class="right carousel-control" ng-click="next()" ng-show="slides.length > 1"><span class="glyphicon glyphicon-chevron-right"></span></a>
+<ul rn-carousel rn-carousel-controls rn-carousel-index="carouselIndex" rn-carousel-buffered rn-carousel-transition="hexagon">
+    <li ng-repeat="item in items" ng-switch on="item.type">
+        <div ng-switch-when="img" ng-style="{'background-image': 'url(' + item.url + ')'}" class="bgimage"></div>
+        <youtube-video ng-switch-when="video" video-url="item.url" class="bgimage"></youtube-video>
+        <div ng-switch-when="html" class="bgimage">
+            <div ng-include="item.url"></div>
+        </div>
+    </li>
+</ul>
+
+<div rn-carousel-indicators ng-if="items.length > 1" slides="items" rn-carousel-index="carouselIndex"></div>
+
+<div class="rn-carousel-indicator custom-indicator">
+    <span ng-repeat="item in items" ng-class="{active: $index==$parent.carouselIndex}" ng-click="$parent.carouselIndex = $index">★</span>
+</div>
+
+<div class="rn-carousel-indicator custom-indicator col-md-12">
+    <ul class="list-inline">
+        <li ng-repeat="item in items" ng-click="$parent.carouselIndex = $index">
+            <img ng-src="{{item.url}}" class="img-responsive" ng-class="{active: $index==$parent.carouselIndex}">
+        </li>
+    </ul>
 </div>
